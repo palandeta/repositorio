@@ -1,10 +1,15 @@
 <?php
 class Database 
 {
-	private static $dbName = 'productos' ; 
-	private static $dbHost = 'mysql23669-pablo.jl.serv.net.mx' ;
+	//private static $dbName = 'productos' ; 
+	//private static $dbHost = 'mysql23669-pablo.jl.serv.net.mx' ;
+	//private static $dbUsername = 'root';
+	//private static $dbUserPassword = 'ATCoch59681';
+	private static $dbName = 'sampledb' ; 
+	private static $dbHost = '10.129.30.228' ;
 	private static $dbUsername = 'root';
-	private static $dbUserPassword = 'ATCoch59681';
+	private static $dbUserPassword = 'LIHUFfRTDD55mbv5';
+	
 	
 	private static $cont  = null;
 	
