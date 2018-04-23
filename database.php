@@ -6,7 +6,7 @@ class Database
 	//private static $dbUsername = 'root';
 	//private static $dbUserPassword = 'ATCoch59681';
 	private static $dbName = 'sampledb' ; 
-	private static $dbHost = '10.129.30.228' ;
+	private static $dbHost = '10.129.29.12' ;
 	private static $dbUsername = 'root';
 	private static $dbUserPassword = 'LIHUFfRTDD55mbv5';
 	
