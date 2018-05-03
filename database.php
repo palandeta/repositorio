@@ -30,7 +30,7 @@ class Database
 	//AZURE 25-04-18
 	 //   self::$cont =  new PDO("sqlsrv:server = tcp:servidordata.database.windows.net,1433; Database = bdd1", "pablo", "Alison2013");
 	//Azure Postgres 03-05-18
-	 self::$cont =  new PDO("host=svrpg.postgres.database.azure.com port=5432 dbname=bdd1 user=pablolandetalopez@svrpg password=Pablolandeta666");
+	 self::$cont =  new PDO("host=svrpg.postgres.database.azure.com port=5432 dbname=bdd1 user=pablolandetalopez password=Pablolandeta666");
 	//self::$cont = new PDO('pgsql:dbname=bdd1;host=svrpg.postgres.database.azure.com;user=pablolandetalopez@svrpg;password=Pablolandeta666');		
         }
         catch(PDOException $e) 
