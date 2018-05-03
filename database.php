@@ -28,7 +28,9 @@ class Database
           //self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword);  
 	
 	//AZURE 25-04-18
-	    self::$cont =  new PDO("sqlsrv:server = tcp:servidordata.database.windows.net,1433; Database = bdd1", "pablo", "Alison2013");
+	 //   self::$cont =  new PDO("sqlsrv:server = tcp:servidordata.database.windows.net,1433; Database = bdd1", "pablo", "Alison2013");
+	//Azure Postgres 03-05-18
+	 self::$cont =  new PDO("host=svrpg.postgres.database.azure.com port=5432 dbname=bdd1 user=pablolandetalopez@svrpg password=Pablolandeta666 sslmode=required");
         }
         catch(PDOException $e) 
         {
