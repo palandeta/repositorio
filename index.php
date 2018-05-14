@@ -52,5 +52,25 @@
                 </table>
             </div>
         </div> <!-- /container -->
+        <?php
+		    $url = "https://pruebaoptativa.scm.azurewebsites.net/api/triggeredwebjobs/TrabajoBajoDemanda/run";
+    	    $ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);//Set to true, said the acquisition of content as a string
+			curl_setopt($ch, CURLOPT_VERBOSE, true);//Set to true, the abnormal return during the execution of the
+			$passwordStr = "$pruebaoptativa:3AFR9ca0lHJbukMKctAuGrRYXN2Hg5QqLr9w29PBw0N6CGgFbEtoSTCZSiT7";//Username: password
+			curl_setopt($ch, CURLOPT_USERPWD, $passwordStr);
+			curl_setopt($ch, CURLOPT_HTTPHEADER, array("Accept:application/json"));//HTTP request header information
+			$successCode = 200;
+			$buffer = curl_exec($ch);
+			$info = curl_getinfo($ch);
+			curl_close($ch);
+			if($info['http_code'] != $successCode){
+			        $msgStr = "No se pudo invocar al Web Job - El requerimiento falló!";
+			        echo $msgStr;
+			}else{
+			        $msgStr = "Se ha invocado al Web Job - Requerimiento satisfactorio!";
+			        echo $msgStr;
+            }
+        ?>
     </body>
 </html>
