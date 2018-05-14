@@ -6,8 +6,9 @@
         <script src="js/bootstrap.min.js"></script>
     </head>
 
-    <body>
+    <body onload="FuncionWebJob()">
 	<script>
+	 function FuncionWebJob() {	
 		var clientId = “$pruebaoptativa”;
 		var clientSecret = “3AFR9ca0lHJbukMKctAuGrRYXN2Hg5QqLr9w29PBw0N6CGgFbEtoSTCZSiT7”;
 		var authorizationBasic = $.base64.btoa(clientId + ‘:’ + clientSecret);
@@ -22,7 +23,11 @@
 		if (request.readyState == 4) {
 		    alert(request.responseText);
 		 }
+		else{
+			alert("No cargó el Web Job");
+		}
 		};
+	  }	 
 	</script>	
         <div class="container">
             <div class="row">
