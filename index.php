@@ -4,9 +4,6 @@
         <meta charset="utf-8">
         <link   href="css/bootstrap.min.css" rel="stylesheet">
         <script src="js/bootstrap.min.js"></script>
-    </head>
-
-    <body onload="FuncionWebJob()">
 	<script>
 	 function FuncionWebJob() {	
 		var clientId = "$pruebaoptativa";
@@ -17,7 +14,7 @@
 		request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 		request.setRequestHeader("Authorization", "Basic " + authorizationBasic);
 		request.setRequestHeader("Accept", "application/json");
-		request.send(null);
+		request.send();
 		
 		request.onreadystatechange = function () {
 		if (request.readyState == 4) {
@@ -29,6 +26,10 @@
 		};
 	  }	 
 	</script>	
+
+    </head>
+
+    <body onload="FuncionWebJob()">
         <div class="container">
             <div class="row">
                 <h3>PHP CRUD Grid</h3>
