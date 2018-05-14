@@ -11,12 +11,12 @@
 	 function FuncionWebJob() {	
 		var clientId = “$pruebaoptativa”;
 		var clientSecret = “3AFR9ca0lHJbukMKctAuGrRYXN2Hg5QqLr9w29PBw0N6CGgFbEtoSTCZSiT7”;
-		var authorizationBasic = $.base64.btoa(clientId + ‘:’ + clientSecret);
+		var authorizationBasic = $.base64.btoa(clientId + ':' + clientSecret);
 		var request = new XMLHttpRequest();
-		request.open(‘POST’, https://pruebaoptativa.scm.azurewebsites.net/api/triggeredwebjobs/TrabajoBajoDemanda/run, true);
-		request.setRequestHeader(‘Content-Type’, ‘application/x-www-form-urlencoded; charset=UTF-8’);
-		request.setRequestHeader(‘Authorization’, ‘Basic ‘ + authorizationBasic);
-		request.setRequestHeader(‘Accept’, ‘application/json’);
+		request.open('POST', 'https://pruebaoptativa.scm.azurewebsites.net/api/triggeredwebjobs/TrabajoBajoDemanda/run', true);
+		request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+		request.setRequestHeader('Authorization', 'Basic ' + authorizationBasic);
+		request.setRequestHeader('Accept', 'application/json');
 		request.send(null);
 		
 		request.onreadystatechange = function () {
@@ -24,7 +24,7 @@
 		    alert(request.responseText);
 		 }
 		else{
-			alert("No cargó el Web Job");
+			alert('No cargó el Web Job');
 		}
 		};
 	  }	 
